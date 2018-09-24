@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import logo from './logo.svg';
+
 import Header from './components/Heading/Header.js';
+import AboutMe from './components/About_Me/About_Me.js';
 
 import './App.css';
 
@@ -14,6 +16,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Header />
+        <AboutMe />
       </div>
     );
   }
