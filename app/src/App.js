@@ -5,7 +5,7 @@ import logo from './logo.svg';
 // Import Components
 import Header from './components/Heading/Header.js';
 import AboutMe from './components/About_Me/About_Me.js';
-import Projects from './components/Projects/Projects.js';
+import ProjectSection from './components/Projects/ProjectSection.js';
 
 import './App.css';
 
@@ -19,6 +19,7 @@ class App extends Component {
         </header>
         <Header />
         <AboutMe />
+        <ProjectSection />
       </div>
     );
   }
