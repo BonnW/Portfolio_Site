@@ -20,10 +20,12 @@ class AboutMe extends Component {
         <Collapse in={this.state.open}>
           <div>
             <Well>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life 
-              accusamus terry richardson ad squid. Nihil anim keffiyeh
-              helvetica, craft beer labore wes anderson cred nesciunt sapiente
-              ea proident.
+              Full-Stack Developer currently enrolled
+              at Lambda School with years of
+              experience in Technology and Customer
+              Service. Striving to continue learning,
+              explore new possibilities and different
+              opportunities.
             </Well>
           </div>
         </Collapse>
