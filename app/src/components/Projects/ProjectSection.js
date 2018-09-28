@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Well } from 'react-bootstrap';
+import { Grid, Row, Col, Well, Panel } from 'react-bootstrap';
+
+import ProjectBox from './ProjectBox.js';
 
 import './ProjectSection.css';
 
@@ -15,38 +17,30 @@ class ProjectSection extends Component {
         <div>
           <Grid className="Grid_Container">
             <Row className="Project_Row">
-              <Col sm={6} className="Box">
-                <Well>
-                  Stuff
-                </Well>
+              <Col xs={6} className="Box">
+                <Panel>
+                  <Panel.Body>Test</Panel.Body>
+                  <Panel.Footer>Test Title</Panel.Footer>
+                </Panel>
+                {/* <ProjectBox /> */}
               </Col>
-              <Col sm={6} className="Box">
-                <Well>
-                  More Stuff
-                </Well>
+              <Col xs={6} className="Box">
+                More Stuff
               </Col>
             </Row>
             <Row>
-              <Col sm={6} className="Box">
-                <Well>
-                  Stuff
-                </Well>
+              <Col xs={6} className="Box">
+                Stuff
               </Col>
-              <Col sm={6} className="Box">
-                <Well>
-                  More Stuff
-                </Well>
+              <Col xs={6} className="Box">
+                More Stuff
               </Col>
             </Row><Row>
-              <Col sm={6} className="Box">
-                <Well>
-                  Stuff
-                </Well>
+              <Col xs={6} className="Box">
+                Stuff
               </Col>
-              <Col sm={6} className="Box">
-                <Well>
-                  More Stuff
-                </Well>
+              <Col xs={6} className="Box">
+                More Stuff
               </Col>
             </Row>
           </Grid>
