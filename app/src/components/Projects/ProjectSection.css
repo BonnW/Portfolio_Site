@@ -1,7 +1,8 @@
 .Box {
   border: 1px solid black;
+  height: 200px;
 }
 
 .Project_Row {
+  padding-bottom: 50px;
 }
-

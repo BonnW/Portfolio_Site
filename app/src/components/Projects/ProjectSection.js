@@ -17,29 +17,33 @@ class ProjectSection extends Component {
         <div>
           <Grid className="Grid_Container">
             <Row className="Project_Row">
-              <Col xs={6} className="Box">
+              <Col xs={4} xsOffset={1} className="Box">
                 <Panel>
                   <Panel.Body>Test</Panel.Body>
                   <Panel.Footer>Test Title</Panel.Footer>
                 </Panel>
                 {/* <ProjectBox /> */}
               </Col>
-              <Col xs={6} className="Box">
+              <Col xs={4} xsOffset={2} className="Box">
+                <Panel>
+                  <Panel.Body>Test</Panel.Body>
+                  <Panel.Footer>Test Title</Panel.Footer>
+                </Panel>
+              </Col>
+            </Row>
+            <Row className="Project_Row">
+              <Col xs={4} xsOffset={1} className="Box">
+                Stuff
+              </Col>
+              <Col xs={4} xsOffset={2} className="Box">
                 More Stuff
               </Col>
             </Row>
-            <Row>
-              <Col xs={6} className="Box">
+            <Row className="Project_Row">
+              <Col xs={4} xsOffset={1} className="Box">
                 Stuff
               </Col>
-              <Col xs={6} className="Box">
-                More Stuff
-              </Col>
-            </Row><Row>
-              <Col xs={6} className="Box">
-                Stuff
-              </Col>
-              <Col xs={6} className="Box">
+              <Col xs={4} xsOffset={2} className="Box">
                 More Stuff
               </Col>
             </Row>
