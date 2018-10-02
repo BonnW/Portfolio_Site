@@ -1,8 +1,26 @@
 .Box {
   border: 1px solid black;
-  height: 200px;
+  min-height: 200px;
+  border-radius: 10px;
 }
 
 .Project_Row {
   padding-bottom: 50px;
+}
+
+.ComingSoon_Box {
+  width: 100%;
+}
+
+.Project_Box {
+  max-width: 100%;
+  margin: 20px 10px;
+}
+
+.Panel_Box {
+  height: 100%;
+}
+
+.Test_Button {
+  width: 100%;
 }
