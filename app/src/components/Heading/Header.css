@@ -1,3 +1,7 @@
 .profile-pic {
-  width: 30%;
+  width: 100%;
+}
+
+.Container {
+  margin-bottom: 20px;
 }

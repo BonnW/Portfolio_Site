@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col, Image } from 'react-bootstrap';
 
 // import Icon Links
 import IconLinks from './IconLink.js';
@@ -16,14 +17,7 @@ import './Header.css';
 //   </svg>
 // );
 
-
-class Header extends Component {
-  
-
-  render() {
-    return (
-      <div>
-        <div className="picture">
+{/* <div className="picture">
           <img src={pic} alt="profile" className="profile-pic" />
         </div>
         <div className="title">
@@ -32,8 +26,30 @@ class Header extends Component {
         </div>
         <div className="icon_links">
           <IconLinks />
-        </div>
-        
+        </div> */}
+
+
+class Header extends Component {
+  
+
+  render() {
+    return (
+      <div className="Container">
+        <Grid>
+          <Row>
+            <Col xs={4} xsOffset={4}>
+              <Image src={pic} className="profile-pic" />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={4} xsOffset={4}>
+              <div className="title">
+                <h1>Bonn Wonghansa</h1>
+                <h2>Full-Stack Engineer</h2>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     )
   }
