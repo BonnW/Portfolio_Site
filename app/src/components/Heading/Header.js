@@ -49,6 +49,11 @@ class Header extends Component {
               </div>
             </Col>
           </Row>
+          <Row>
+            <Col xs={4} xsOffset={4}>
+              <IconLinks />
+            </Col>
+          </Row>
         </Grid>
       </div>
     )
