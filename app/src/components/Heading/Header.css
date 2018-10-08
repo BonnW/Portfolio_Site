@@ -4,4 +4,17 @@
 
 .Container {
   margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.Name_Box {
+  margin-top: 20px;
+}
+
+.testBox {
+  border: 1px solid black;
+}
+
+.testSVG {
+  width: 100%;
 }
