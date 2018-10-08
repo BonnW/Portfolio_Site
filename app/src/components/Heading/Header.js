@@ -39,10 +39,14 @@ class Header extends Component {
           </Row>
           <Row>
             <Col xs={1} xsOffset={5}>
-              <ReactSVG src="github.svg" /> 
+              <a href="https://github.com/BonnW" target="_blank">
+                <ReactSVG src="github.svg" /> 
+              </a>
             </Col>
             <Col xs={1}>
-              <ReactSVG src="linkedin.svg" />
+              <a href="https://www.linkedin.com/in/bonn-wonghansa-75bb8914b/" target="_blank">
+                <ReactSVG src="linkedin.svg" />
+              </a>
             </Col>
           </Row>
         </Grid>
