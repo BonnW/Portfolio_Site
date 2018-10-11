@@ -1,33 +1,63 @@
 import React, { Component } from 'react';
-import { Panel, Carousel } from 'react-bootstrap';
+import { Panel, Image, Carousel, Popover, OverlayTrigger, Button } from 'react-bootstrap';
+
+// import css from ProjectSection.css
+import './ProjectSection.css'; 
 
 // import Project sample pics
-import pic1 from '../../assets/profilePic.png';
+// import pic1 from '../../assets/profilePic.png';
 
+// import PropertyMaxx photos
+import pic1 from '../../assets/PropertyMaxxLoginPic.png';
+import pic2 from '../../assets/PropertyMaxxPic2.png';
+import pic3 from '../../assets/PropertyMaxxPic3.png';
+
+// define classes in an object to be used later
+const boxClasses = {
+
+}
+
+const popoverTop = (
+  <Popover id="popover-positioned-right" title=" Popover top">
+    More Stuff
+  </Popover>    
+);
 
 class ProjectBox extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      buttonMessage: "PropertyMaxx",
+    }
+  }
+
+  handleMouseOver = () => {
+    // console.log("mouse over detected");
+    this.setState({ buttonMessage: "See More" });
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ buttonMessage: "PropertyMaxx" });
+  }
   
   render() {
     return (
       <div className="Project_Box">
-        <Carousel>
-          <Carousel.Item>
-            <img width={100} height={200} alt="200x200" src={pic1} />
-            <Carousel.Caption>
-              <h2>Test</h2>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Carousel.Caption>
-              <h2>Test2</h2>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Carousel.Caption>
-              <h2>Test3</h2>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+        <Image src={pic1} className="ComingSoon_Box" />
+        <OverlayTrigger 
+          trigger="click" 
+          placement="top" 
+          overlay={popoverTop}
+          >
+          <Button 
+            className="Test_Button" 
+            onMouseOver={this.handleMouseOver}
+            onMouseLeave={this.handleMouseLeave}
+            >
+            {this.state.buttonMessage}
+          </Button>
+        </OverlayTrigger>
       </div>
     )
   }
