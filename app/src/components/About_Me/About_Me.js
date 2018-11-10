@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col, Button, Collapse, Well } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Grid, Row, Col, Button, Collapse, Well } from "react-bootstrap";
 
+import "./About_Me.css";
 
 class AboutMe extends Component {
   constructor(props) {
@@ -11,11 +12,10 @@ class AboutMe extends Component {
     };
   }
 
-
   render() {
     return (
       <div>
-        <Grid>
+        <Grid className="About_Me_Container">
           <Row>
             <Col xs={10} xsOffset={1}>
               <Button onClick={() => this.setState({ open: !this.state.open })}>
@@ -24,12 +24,10 @@ class AboutMe extends Component {
               <Collapse in={this.state.open}>
                 <div>
                   <Well>
-                    Full-Stack Developer currently enrolled
-                    at Lambda School with years of
-                    experience in Technology and Customer
-                    Service. Striving to continue learning,
-                    explore new possibilities and different
-                    opportunities.
+                    Full-Stack Developer currently enrolled at Lambda School
+                    with years of experience in Technology and Customer Service.
+                    Striving to continue learning, explore new possibilities and
+                    different opportunities.
                   </Well>
                 </div>
               </Collapse>
@@ -37,9 +35,8 @@ class AboutMe extends Component {
           </Row>
         </Grid>
       </div>
-    )
+    );
   }
 }
-
 
 export default AboutMe;

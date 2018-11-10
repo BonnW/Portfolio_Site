@@ -12,9 +12,11 @@ class Body extends Component {
   render() {
     return (
       <div className="body">
-        <Header />
-        <AboutMe />
-        <ProjectSection />
+        <div className="content">
+          <Header />
+          <AboutMe />
+          <ProjectSection />
+        </div>
       </div>
     );
   }

@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col, Image, Panel } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Grid, Row, Col, Image, Panel } from "react-bootstrap";
 
-import ProjectBox from './ProjectBox.js';
+import ProjectBox from "./ProjectBox.js";
 
-import './ProjectSection.css';
+import "./ProjectSection.css";
 
 // import images
-import comingSoon from '../../assets/comingSoon.png';
-
+import comingSoon from "../../assets/comingSoon.png";
 
 class ProjectSection extends Component {
-  
   render() {
-    return(
+    return (
       <div>
-        <div className="Projects_Title">
-          <h1>Projects</h1>
-        </div>
-        <br />
         <div>
           <Grid className="Grid_Container">
+            <Row className="Projects_Title">
+              <h1>Projects</h1>
+            </Row>
             <Row className="Project_Row">
               <Col xs={4} xsOffset={1} className="Box">
                 <ProjectBox />
@@ -53,6 +50,5 @@ class ProjectSection extends Component {
     );
   }
 }
-
 
 export default ProjectSection;
