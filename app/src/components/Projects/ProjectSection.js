@@ -17,6 +17,7 @@ class ProjectSection extends Component {
             <Row className="Projects_Title">
               <h1>Projects</h1>
             </Row>
+            <br />
             <Row className="Project_Row">
               <Col xs={4} xsOffset={1} className="Box">
                 <ProjectBox />
