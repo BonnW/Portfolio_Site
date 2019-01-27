@@ -1,13 +1,5 @@
 .App {
   text-align: center;
-  background-color: #aaaaaf;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-image: "./assets/Thailand_Backdrop";
+  width: 100%;
 }

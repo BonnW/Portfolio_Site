@@ -1,0 +1,28 @@
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+}
+
+.Landing_Main {
+  background-image: url("../../assets/Thailand_Backdrop.jpg");
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.test_header {
+  font-size: 100px;
+  color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.75;
+  /* app\src\assets\Thailand_Backdrop.jpg */
+}
+
+.title {
+  color: white;
+}
