@@ -18,8 +18,10 @@ class Landing extends Component {
     return (
       <div className="Landing_Main">
         <div className="test_header">
-          <h1 className="title">Hi I'm Bonn!</h1>
-          <h2>I'm a Full-Stack Software Developer!</h2>
+          <div className="title">
+            <h1>Hi I'm Bonn!</h1>
+            <h2>I'm a Full-Stack Software Developer!</h2>
+          </div>
         </div>
       </div>
     );

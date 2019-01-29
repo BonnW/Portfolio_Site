@@ -13,11 +13,12 @@ body,
 }
 
 .test_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 100px;
-  color: white;
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
+  /* color: white; */
+  width: 80%;
   background-color: black;
   opacity: 0.75;
   /* app\src\assets\Thailand_Backdrop.jpg */
