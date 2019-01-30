@@ -11,10 +11,10 @@ import pic from "../../assets/profilePic.png";
 // import css
 import "./Header.css";
 
-const iconStyles = {
-  width: 40,
-  height: 60
-};
+// const iconStyles = {
+//   width: 40,
+//   height: 60
+// };
 
 class Header extends Component {
   render() {

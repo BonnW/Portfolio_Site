@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Grid, Row, Col, Image } from "react-bootstrap";
+// import { Grid, Row, Col, Image } from "react-bootstrap";
 
 import "./Landing.css";
 
-import ThailandBackdrop from "../../assets/Thailand_Backdrop.jpg";
+// import ThailandBackdrop from "../../assets/Thailand_Backdrop.jpg";
 
-let imgUrl = "../../assets/Thailand_Backdrop.jpg";
+// let imgUrl = "../../assets/Thailand_Backdrop.jpg";
 
 // let Landing_Styles = {
 //   width: "100%",

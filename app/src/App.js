@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 
 // Import Components
-import Body from "./components/Body/Body.js";
+// import Body from "./components/Body/Body.js";
 import Landing from "./components/Landing/Landing.js";
 
 import "./App.css";
