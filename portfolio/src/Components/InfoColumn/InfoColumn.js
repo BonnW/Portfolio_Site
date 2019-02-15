@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Sidebar extends Component {
+class InfoColumn extends Component {
   render() {
     return (
       <div className="App">
@@ -12,4 +12,4 @@ class Sidebar extends Component {
   }
 }
 
-export default Sidebar;
+export default InfoColumn;
