@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
-import Home from "./Components/Home/Home";
-
 import "./App.css";
+
+// Component Imports
+import Layout from "./Components/Layout/Layout";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home />
+        <Layout />
       </div>
     );
   }
