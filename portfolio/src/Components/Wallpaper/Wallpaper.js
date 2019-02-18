@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import lofiWallpaper from "../../assets/lofiWallpaper.jpg";
+import "./Wallpaper.css";
 
 export default class Wallpaper extends Component {
   render() {
