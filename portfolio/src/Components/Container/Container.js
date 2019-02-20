@@ -6,8 +6,9 @@ export default class Container extends Component {
   render() {
     return (
       <div>
-        <Layout />
-        <Wallpaper />
+        <Layout>
+          <Wallpaper />
+        </Layout>
       </div>
     );
   }
