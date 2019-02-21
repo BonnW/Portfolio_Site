@@ -12,6 +12,9 @@ import {
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Menu from "@material-ui/icons/Menu";
 
+import Header from "../Header/Header.js";
+import PageNav from "../PageNav/PageNav.js";
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -61,8 +64,9 @@ class Layout extends Component {
     const drawer = (
       <div>
         <div className={classes.toolbar} />
-        hello
+        <Header />
         <Divider />
+        <PageNav />
       </div>
     );
 
