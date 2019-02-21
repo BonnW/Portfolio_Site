@@ -69,7 +69,7 @@ class Layout extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar}>
+        {/* <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -83,7 +83,7 @@ class Layout extends Component {
               Responsive drawer
             </Typography>
           </Toolbar>
-        </AppBar>
+        </AppBar> */}
         <nav className={classes.drawer}>
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Hidden smUp implementation="css">
