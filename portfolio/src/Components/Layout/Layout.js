@@ -15,6 +15,8 @@ import Menu from "@material-ui/icons/Menu";
 import Header from "../Header/Header.js";
 import PageNav from "../PageNav/PageNav.js";
 
+import "./Layout.css";
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -22,15 +24,10 @@ const styles = theme => ({
     display: "flex"
   },
   drawer: {
+    backgroundColor: "Green",
     [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0
-    }
-  },
-  appBar: {
-    marginLeft: drawerWidth,
-    [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${drawerWidth}px)`
     }
   },
   menuButton: {
@@ -39,13 +36,14 @@ const styles = theme => ({
       display: "none"
     }
   },
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth
-  },
   content: {
     flexGrow: 1,
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing.unit * 3,
+    backgroundColor: "maroon",
+    height: "100vh"
+  },
+  drawerPaper: {
+    backgroundColor: "Orange"
   }
 });
 
@@ -63,7 +61,6 @@ class Layout extends Component {
 
     const drawer = (
       <div>
-        <div className={classes.toolbar} />
         <Header />
         <Divider />
         <PageNav />
@@ -73,21 +70,6 @@ class Layout extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        {/* <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerToggle}
-              className={classes.menuButton}
-            >
-              <Menu />
-            </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              Responsive drawer
-            </Typography>
-          </Toolbar>
-        </AppBar> */}
         <nav className={classes.drawer}>
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Hidden smUp implementation="css">
