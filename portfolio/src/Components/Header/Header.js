@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+// import profile pic from src/assets
+
 export default class Header extends Component {
   render() {
     return (
