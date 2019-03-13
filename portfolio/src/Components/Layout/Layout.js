@@ -28,8 +28,6 @@ const styles = theme => ({
     }
   },
   content: {
-    flexGrow: 1,
-    padding: theme.spacing.unit * 3,
     backgroundColor: "maroon",
     height: "100vh"
   },
@@ -88,7 +86,7 @@ class Layout extends Component {
             </Drawer>
           </Hidden>
         </nav>
-        <main>
+        <main className={classes.content}>
           <Wallpaper />
         </main>
       </div>

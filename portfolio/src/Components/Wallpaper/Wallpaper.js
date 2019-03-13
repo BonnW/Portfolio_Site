@@ -19,6 +19,7 @@ function Wallpaper() {
   return (
     <div className="Wallpaper__Root">
       <img
+        className="Wallpaper__Img"
         src={require("../../assets/lofiWallpaper.jpg")}
         alt="lofi hip hop radio wallpaper"
       />

@@ -1,7 +1,12 @@
-img {
+.Wallpaper__Img {
   width: 100%;
+  height: 100vh;
 }
 
 .Wallpaper__Root {
   background-color: maroon;
 }
+
+/* img {
+  width: 100%;
+} */
