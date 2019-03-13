@@ -1,19 +1,10 @@
 import React, { Component } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Hidden,
-  Drawer,
-  Divider,
-  withStyles
-} from "@material-ui/core";
+import { Hidden, Drawer, Divider, withStyles } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Menu from "@material-ui/icons/Menu";
 
 import Header from "../Header/Header.js";
 import PageNav from "../PageNav/PageNav.js";
+import Wallpaper from "../Wallpaper/Wallpaper";
 
 import "./Layout.css";
 
@@ -43,7 +34,7 @@ const styles = theme => ({
     height: "100vh"
   },
   drawerPaper: {
-    backgroundColor: "Orange"
+    backgroundColor: "maroon"
   }
 });
 
@@ -97,9 +88,8 @@ class Layout extends Component {
             </Drawer>
           </Hidden>
         </nav>
-        <main className={classes.content}>
-          <div className={classes.toolbar} />
-          {children}
+        <main>
+          <Wallpaper />
         </main>
       </div>
     );
