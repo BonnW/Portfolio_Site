@@ -1,5 +1,11 @@
-.Profile__Picture {
+.Header__Picture {
   width: 100%;
   border-radius: 50%;
   padding: 12px 12px 0 12px;
+}
+
+.Header__Icons {
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
 }
