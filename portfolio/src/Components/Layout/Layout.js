@@ -8,16 +8,14 @@ import Wallpaper from "../Wallpaper/Wallpaper";
 
 import "./Layout.css";
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 const styles = theme => ({
   root: {
     display: "flex"
   },
   drawer: {
-    backgroundColor: "Green",
     [theme.breakpoints.up("sm")]: {
-      width: drawerWidth,
       flexShrink: 0
     }
   },
@@ -32,6 +30,7 @@ const styles = theme => ({
     height: "100vh"
   },
   drawerPaper: {
+    width: drawerWidth,
     backgroundColor: "maroon"
   }
 });
@@ -60,7 +59,6 @@ class Layout extends Component {
       <div className={classes.root}>
         <CssBaseline />
         <nav className={classes.drawer}>
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Hidden smUp implementation="css">
             <Drawer
               container={this.props.container}

@@ -1,4 +1,5 @@
 .Profile__Picture {
-  width: 10em;
+  width: 100%;
   border-radius: 50%;
+  padding: 12px 12px 0 12px;
 }
