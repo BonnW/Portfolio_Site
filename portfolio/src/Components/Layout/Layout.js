@@ -27,11 +27,15 @@ const styles = theme => ({
   },
   content: {
     backgroundColor: "maroon",
+    width: "100%",
     height: "100vh"
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "maroon"
+    height: "100vh",
+    background: "#8e0e00",
+    background: "-webkit-linear-gradient(to bottom, #8e0e00, #1f1c18)",
+    background: "linear-gradient(to bottom, #8e0e00, #1f1c18)"
   }
 });
 
