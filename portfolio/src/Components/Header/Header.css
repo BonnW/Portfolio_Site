@@ -1,7 +1,7 @@
 .Header__Picture {
-  width: 100%;
+  width: 90%;
   border-radius: 50%;
-  padding: 12px 12px 0 12px;
+  padding: 15px;
 }
 
 .Header__Icons {
