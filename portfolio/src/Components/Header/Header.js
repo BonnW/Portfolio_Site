@@ -45,11 +45,31 @@ const styles = {
 
   titleBox: {
     marginTop: 15,
-    marginBottom: 15
+    marginBottom: 5
   },
 
   titleText: {
-    marginTop: 15
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "rgb(255, 234, 193)"
+  },
+
+  contactContainer: {
+    border: "3px solid black",
+    width: "80%"
+  },
+
+  contactBox: {
+    width: "80%",
+    backgroundColor: "white",
+    opacity: 0.75
+  },
+
+  contactText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "black",
+    opacity: 1
   },
 
   avatar: {
@@ -58,7 +78,8 @@ const styles = {
   bigAvatar: {
     width: "70%",
     height: "auto",
-    margin: "auto"
+    margin: "auto",
+    border: "2px solid black"
   }
 };
 
@@ -76,36 +97,45 @@ function Header(props) {
           alignItems="center"
           xs={12}
           className={classes.titleBox}
+        />
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          className={classes.contactContainer}
         >
-          <Typography
-            component="h1"
-            variant="headline"
-            classes={classes.titleText}
+          <Grid
+            container
+            xs={12}
+            className={classes.contactBox}
+            justify="center"
+            alignItems="center"
           >
-            Bonn Wonghansa
-          </Typography>
-          <Typography variant="title" gutterBottom>
-            Full-Stack Developer
-          </Typography>
-        </Grid>
-        <Grid container justify="center" alignItems="center">
-          <Grid item xs={3}>
-            <a target="_blank" href="https://github.com/BonnW">
-              <FaGithub size="2.5em" color="black" />
-            </a>
-          </Grid>
-          <Grid item xs={3}>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/bonn-wonghansa/"
+            <Typography
+              variant="title"
+              gutterBottom
+              className={classes.contactText}
             >
-              <FaLinkedin size="2.5em" color="black" />
-            </a>
-          </Grid>
-          <Grid item xs={3}>
-            <a target="_blank" href="">
-              <FaTwitter size="2.5em" color="black" />
-            </a>
+              vv Social Media vv
+            </Typography>
+            <Grid item xs={3}>
+              <a target="_blank" href="https://github.com/BonnW">
+                <FaGithub size="2.2em" color="black" />
+              </a>
+            </Grid>
+            <Grid item xs={3}>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/bonn-wonghansa/"
+              >
+                <FaLinkedin size="2.2em" color="black" />
+              </a>
+            </Grid>
+            <Grid item xs={3}>
+              <a target="_blank" href="">
+                <FaTwitter size="2.2em" color="black" />
+              </a>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
