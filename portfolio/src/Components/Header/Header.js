@@ -49,20 +49,23 @@ const styles = {
   },
 
   titleText: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "bold",
-    color: "rgb(255, 234, 193)"
+    color: "white",
+    opacity: 0.9
   },
 
   contactContainer: {
-    border: "3px solid black",
-    width: "80%"
+    border: "2px solid black",
+    width: "80%",
+    paddingTop: 5,
+    backgroundColor: "rgb(255, 244, 244)",
+    opacity: 0.9
   },
 
   contactBox: {
     width: "80%",
-    backgroundColor: "white",
-    opacity: 0.75
+    opacity: 1
   },
 
   contactText: {
@@ -90,13 +93,14 @@ function Header(props) {
         <Grid item xs={12} classes={classes.avatarBox}>
           <Avatar alt="Bonn W." src={pic} className={classes.bigAvatar} />
         </Grid>
-        <Grid
-          container
-          justify="center"
-          alignItems="center"
-          xs={12}
-          className={classes.titleBox}
-        />
+        <Grid item xs={12} className={classes.titleBox}>
+          <Typography variant="h3" className={classes.titleText}>
+            Bonn W.
+          </Typography>
+          <Typography variant="h4" gutterBottom className={classes.titleText}>
+            Full-Stack Developer
+          </Typography>
+        </Grid>
         <Grid
           container
           justify="center"
@@ -110,13 +114,6 @@ function Header(props) {
             justify="center"
             alignItems="center"
           >
-            <Typography
-              variant="title"
-              gutterBottom
-              className={classes.contactText}
-            >
-              vv Social Media vv
-            </Typography>
             <Grid item xs={3}>
               <a target="_blank" href="https://github.com/BonnW">
                 <FaGithub size="2.2em" color="black" />

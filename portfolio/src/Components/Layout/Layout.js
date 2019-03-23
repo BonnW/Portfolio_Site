@@ -32,7 +32,7 @@ const styles = theme => ({
     }
   },
   content: {
-    backgroundColor: "blue",
+    backgroundColor: "maroon",
     width: "100%",
     height: "100%"
     // border: "1px solid black"
@@ -40,6 +40,7 @@ const styles = theme => ({
   drawerPaper: {
     width: drawerWidth,
     height: "100%",
+    borderRight: "1px solid black",
     background: "#8e0e00",
     background: "-webkit-linear-gradient(to bottom, #8e0e00, #1f1c18)",
     background: "linear-gradient(to bottom, #8e0e00, #1f1c18)"

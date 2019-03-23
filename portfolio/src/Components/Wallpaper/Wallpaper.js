@@ -9,7 +9,8 @@ const styles = theme => ({
     height: "100%",
     width: "100%",
     backgroundImage: "url(" + lofiWallpaper + ")",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
+    boxShadow: `1px 3px 5px black`
   }
 });
 
