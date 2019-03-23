@@ -6,8 +6,9 @@ import green from "@material-ui/core/colors/green";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 
-import "./PageNav.css";
+// import "./PageNav.css";
 
 const styles = theme => ({
   buttonWrapper: {
@@ -31,6 +32,27 @@ const styles = theme => ({
   typography: {
     height: "500px",
     margin: theme.spacing.unit * 2
+  },
+
+  listContainer: {
+    // textAlign: "center"
+  },
+  listRoot: {
+    textAlign: "center"
+  },
+  listButton: {
+    fontSize: 20,
+    fontWeight: "bold"
+    // backgroundColor: "green"
+
+    // border: "10px solid black"
+  },
+  listText: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+    // backgroundColor: "blue",
+    margin: "auto"
   }
 });
 
@@ -110,14 +132,27 @@ class PageNav extends Component {
     } = this.state;
     return (
       <div className="Nav__Main">
-        <List component="nav">
-          <ListItem button onClick={this.handleClickButton}>
-            <ListItemText primary="About Me" />
+        <List component="nav" className={classes.listRoot}>
+          <ListItem
+            button
+            onClick={this.handleClickButton}
+            className={classes.listButton}
+          >
+            <Typography align="center" className={classes.listText}>
+              About Me
+            </Typography>
           </ListItem>
-          <ListItem button>
-            <ListItemText primary="Projects" />
+          <ListItem
+            button
+            onClick={this.handleClickButton}
+            className={classes.listButton}
+          >
+            <Typography align="center" className={classes.listText}>
+              Projects
+            </Typography>
           </ListItem>
         </List>
+
         <Popover
           open={open}
           anchorEl={this.anchorEl}
