@@ -30,8 +30,10 @@ const styles = theme => ({
   },
   checked: {},
   typography: {
+    // marginLeft: "260",
     height: "500px",
-    margin: theme.spacing.unit * 2
+    width: "500px"
+    // margin: theme.spacing.unit * 2
   },
 
   listContainer: {
@@ -56,52 +58,46 @@ const styles = theme => ({
   }
 });
 
-const inlineStyles = {
-  anchorVertical: {
-    top: {
-      top: -5
-    },
-    center: {
-      top: "calc(50% - 5px)"
-    },
-    bottom: {
-      bottom: -5
-    }
-  },
-  anchorHorizontal: {
-    left: {
-      left: -5
-    },
-    center: {
-      left: "calc(50% - 5px)"
-    },
-    right: {
-      right: -5
-    }
-  }
-};
+// const inlineStyles = {
+//   anchorVertical: {
+//     top: {
+//       top: -5
+//     },
+//     center: {
+//       top: "calc(50% - 5px)"
+//     },
+//     bottom: {
+//       bottom: -5
+//     }
+//   },
+//   anchorHorizontal: {
+//     left: {
+//       left: -5
+//     },
+//     center: {
+//       left: "calc(50% - 5px)"
+//     },
+//     right: {
+//       right: -5
+//     }
+//   }
+// };
 
 class PageNav extends Component {
   state = {
     open: false,
-    anchorOriginVertical: "top",
-    anchorOriginHorizontal: "left",
+    // anchorOriginVertical: "top",
+    // anchorOriginHorizontal: "right",
     transformOriginVertical: "top",
     transformOriginHorizontal: "left",
-    positionTop: 200, // Just so the popover can be spotted more easily
-    positionLeft: 400, // Same as above
-    anchorReference: "anchorEl"
+    positionTop: 25, // Just so the popover can be spotted more easily
+    positionLeft: 285, // Same as above
+    anchorReference: "anchorPosition"
   };
 
   handleChange = key => (event, value) => {
     this.setState({
       [key]: value
-    });
-  };
-
-  handleNumberInputChange = key => event => {
-    this.setState({
-      [key]: parseInt(event.target.value, 10)
     });
   };
 
@@ -169,13 +165,9 @@ class PageNav extends Component {
           }}
         >
           <Typography className={classes.typography}>
-            The content of the Popover. The content of the Popover. The content
-            of the Popover.The content of the Popover. The content of the
-            Popover. The content of the Popover. The content of the Popover.The
-            content of the Popover.
+            The content of the Popover./
           </Typography>
         </Popover>
-        <h4>vv Projects Dropdown vv</h4>
       </div>
     );
   }
