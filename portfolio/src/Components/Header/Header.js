@@ -68,8 +68,7 @@ const styles = {
   contactText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "black",
-    opacity: 1
+    color: "black"
   },
 
   avatar: {

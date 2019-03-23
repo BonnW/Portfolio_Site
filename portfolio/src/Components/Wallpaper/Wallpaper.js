@@ -1,26 +1,15 @@
 import React, { Component } from "react";
 
-import "./Wallpaper.css";
 import { withStyles } from "@material-ui/core";
 
-// export default class Wallpaper extends Component {
-//   render() {
-//     return (
-//       <div className="Wallpaper__Root">
-//         <img
-//           src={require("../../assets/lofiWallpaper.jpg")}
-//           alt="lofi hip hop radio wallpaper"
-//         />
-//       </div>
-//     );
-//   }
-// }
+import lofiWallpaper from "../../assets/lofiWallpaper.jpg";
 
 const styles = theme => ({
   root: {
-    background: "maroon",
+    height: "100%",
     width: "100%",
-    height: "100%"
+    backgroundImage: "url(" + lofiWallpaper + ")",
+    backgroundSize: "cover"
   }
 });
 
@@ -36,11 +25,7 @@ class Wallpaper extends Component {
 
     return (
       <div className={classes.root}>
-        <img
-          className="Wallpaper__Img"
-          src={require("../../assets/lofiWallpaper.jpg")}
-          alt="lofi hip hop radio wallpaper"
-        />
+        {/* Stream Lofi Hip Hop Radio on some sort of Youtube player */}
       </div>
     );
   }

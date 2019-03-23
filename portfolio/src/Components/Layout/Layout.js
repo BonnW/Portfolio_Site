@@ -12,8 +12,14 @@ const drawerWidth = 260;
 
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: "flex",
+    height: "100%"
   },
+
+  drawerContainer: {
+    height: "100%"
+  },
+
   drawer: {
     [theme.breakpoints.up("sm")]: {
       flexShrink: 0
@@ -26,13 +32,14 @@ const styles = theme => ({
     }
   },
   content: {
-    backgroundColor: "maroon",
+    backgroundColor: "blue",
     width: "100%",
-    height: "100vh"
+    height: "100%"
+    // border: "1px solid black"
   },
   drawerPaper: {
     width: drawerWidth,
-    height: "100vh",
+    height: "100%",
     background: "#8e0e00",
     background: "-webkit-linear-gradient(to bottom, #8e0e00, #1f1c18)",
     background: "linear-gradient(to bottom, #8e0e00, #1f1c18)"
@@ -52,7 +59,7 @@ class Layout extends Component {
     const { classes, children } = this.props;
 
     const drawer = (
-      <div>
+      <div className={classes.drawerContainer}>
         <Header />
         <Divider />
         <PageNav />
@@ -62,32 +69,30 @@ class Layout extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <nav className={classes.drawer}>
-          <Hidden smUp implementation="css">
-            <Drawer
-              container={this.props.container}
-              variant="temporary"
-              open={this.state.mobileOpen}
-              onClose={this.handleDrawerToggle}
-              classes={{
-                paper: classes.drawerPaper
-              }}
-            >
-              {drawer}
-            </Drawer>
-          </Hidden>
-          <Hidden xsDown implementation="css">
-            <Drawer
-              classes={{
-                paper: classes.drawerPaper
-              }}
-              variant="permanent"
-              open
-            >
-              {drawer}
-            </Drawer>
-          </Hidden>
-        </nav>
+        <Hidden smUp implementation="css">
+          <Drawer
+            container={this.props.container}
+            variant="temporary"
+            open={this.state.mobileOpen}
+            onClose={this.handleDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            classes={{
+              paper: classes.drawerPaper
+            }}
+            variant="permanent"
+            open
+          >
+            {drawer}
+          </Drawer>
+        </Hidden>
         <main className={classes.content}>
           <Wallpaper />
         </main>

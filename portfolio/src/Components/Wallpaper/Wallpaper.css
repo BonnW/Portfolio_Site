@@ -1,13 +1,13 @@
 .Wallpaper__Root {
   background-color: maroon;
   width: 100%;
+  background-size: cover;
 }
 
 .Wallpaper__Img {
   background-color: green;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 /* img {
