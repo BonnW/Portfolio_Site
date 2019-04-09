@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import {
-  Hidden,
-  Drawer,
-  Divider,
-  withStyles,
-  Paper,
-  Typography
-} from "@material-ui/core";
+import { Hidden, Drawer, Divider, withStyles } from "@material-ui/core";
+// import Paper from "@material-ui/core/Paper";
+// import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import Header from "../Header/Header.js";
@@ -21,17 +16,26 @@ const styles = theme => ({
     height: "100%"
   },
 
+  // mobileRoot: {
+  //   display: "flex",
+  //   width: "100%",
+  //   backgroundColor: "white"
+  // },
+
   drawerContainer: {
     height: "100%"
   },
 
-  drawer: {
-    [theme.breakpoints.up("xs")]: {
-      flexShrink: 0
-    }
-  },
+  // drawer: {
+  //   [theme.breakpoints.up("xs")]: {
+  //     flexShrink: 0
+  //   }
+  // },
 
   content: {
+    [theme.breakpoints.up("xs")]: {
+      flexShrink: 0
+    },
     backgroundColor: "maroon",
     width: "100%",
     height: "100%"
@@ -70,6 +74,9 @@ class Layout extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
+        {/* <Hidden smUp implementation="css">
+          <div>test</div>
+        </Hidden> */}
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
@@ -81,19 +88,13 @@ class Layout extends Component {
             {drawer}
           </Drawer>
         </Hidden>
-        <Hidden xsUp implementation="css">
-          <div>
-            <Paper className={classes.root} elevation={1}>
-              <Typography variant="h5" component="h3">
-                This is a sheet of paper.
-              </Typography>
-              <Typography component="p">
-                Paper can be used to build surface or other elements for your
-                application.
-              </Typography>
-            </Paper>
-          </div>
-        </Hidden>
+        {/* 
+            NOTE for Mobile Development
+            Display content OVER wallpaper.
+            Cannot do it with <Hidden> Object as
+            it only replaces the drawer and moves the wallpaper over.
+          
+           */}
         <main className={classes.content}>
           <Wallpaper />
         </main>
