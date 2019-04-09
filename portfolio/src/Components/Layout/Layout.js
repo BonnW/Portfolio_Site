@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import { Hidden, Drawer, Divider, withStyles } from "@material-ui/core";
+import {
+  Hidden,
+  Drawer,
+  Divider,
+  withStyles,
+  Paper,
+  Typography
+} from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import Header from "../Header/Header.js";
 import PageNav from "../PageNav/PageNav.js";
 import Wallpaper from "../Wallpaper/Wallpaper";
-
-import "./Layout.css";
 
 const drawerWidth = 260;
 
@@ -21,16 +26,11 @@ const styles = theme => ({
   },
 
   drawer: {
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("xs")]: {
       flexShrink: 0
     }
   },
-  menuButton: {
-    marginRight: 20,
-    [theme.breakpoints.up("sm")]: {
-      display: "none"
-    }
-  },
+
   content: {
     backgroundColor: "maroon",
     width: "100%",
@@ -70,19 +70,6 @@ class Layout extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <Hidden smUp implementation="css">
-          <Drawer
-            container={this.props.container}
-            variant="temporary"
-            open={this.state.mobileOpen}
-            onClose={this.handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
@@ -93,6 +80,19 @@ class Layout extends Component {
           >
             {drawer}
           </Drawer>
+        </Hidden>
+        <Hidden xsUp implementation="css">
+          <div>
+            <Paper className={classes.root} elevation={1}>
+              <Typography variant="h5" component="h3">
+                This is a sheet of paper.
+              </Typography>
+              <Typography component="p">
+                Paper can be used to build surface or other elements for your
+                application.
+              </Typography>
+            </Paper>
+          </div>
         </Hidden>
         <main className={classes.content}>
           <Wallpaper />
