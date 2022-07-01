@@ -16,21 +16,9 @@ const styles = theme => ({
     height: "100%"
   },
 
-  // mobileRoot: {
-  //   display: "flex",
-  //   width: "100%",
-  //   backgroundColor: "white"
-  // },
-
   drawerContainer: {
     height: "100%"
   },
-
-  // drawer: {
-  //   [theme.breakpoints.up("xs")]: {
-  //     flexShrink: 0
-  //   }
-  // },
 
   content: {
     [theme.breakpoints.up("xs")]: {
@@ -39,8 +27,8 @@ const styles = theme => ({
     backgroundColor: "maroon",
     width: "100%",
     height: "100%"
-    // border: "1px solid black"
   },
+
   drawerPaper: {
     width: drawerWidth,
     height: "100%",
@@ -88,13 +76,6 @@ class Layout extends Component {
             {drawer}
           </Drawer>
         </Hidden>
-        {/* 
-            NOTE for Mobile Development
-            Display content OVER wallpaper.
-            Cannot do it with <Hidden> Object as
-            it only replaces the drawer and moves the wallpaper over.
-          
-           */}
         <main className={classes.content}>
           <Wallpaper />
         </main>
