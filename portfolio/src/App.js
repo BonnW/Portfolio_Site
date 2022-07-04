@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
+import Layout from "./Components/Layout/Layout";
 
-// Component Imports
-import Container from "./Components/Container/Container";
-// import Layout from "./Components/Layout/Layout";
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container />
+        <Layout />
       </div>
     );
   }
